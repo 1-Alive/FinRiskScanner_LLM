@@ -1,0 +1,23 @@
+[
+  {
+    "package_name": "com.example.danacepat",
+    "app_name": "Dana Cepat",
+    "description": "Pinjaman tunai online cepat cair ke rekening bank. Ajukan kredit hanya dengan KTP dan dapatkan limit pinjaman dalam beberapa menit.",
+    "category": "Finance",
+    "tag": "loan, credit"
+  },
+  {
+    "package_name": "com.example.shop",
+    "app_name": "Belanja Murah",
+    "description": "Online shopping marketplace with product search, seller stores, vouchers, secure checkout and delivery tracking.",
+    "category": "Shopping",
+    "tag": "marketplace, ecommerce"
+  },
+  {
+    "package_name": "com.example.blank",
+    "app_name": "Cool App",
+    "description": "",
+    "category": "Tools",
+    "tag": ""
+  }
+]

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>印尼 App 分类打标工具</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>印尼 App 分类打标工具</h1>
+        <p>基于大模型理解 description，输出标准类别、风险相关性和置信度。</p>
+      </div>
+      <div class="status" id="status">就绪</div>
+    </header>
+
+    <main class="workspace">
+      <section class="panel input-panel">
+        <div class="panel-title">
+          <h2>输入</h2>
+          <div class="actions">
+            <button type="button" id="sampleBtn">示例</button>
+            <button type="button" id="formatBtn">格式化</button>
+            <button type="button" id="clearBtn">清空</button>
+          </div>
+        </div>
+
+        <div class="settings">
+          <label>
+            <span>API Key</span>
+            <input id="apiKey" type="password" autocomplete="off" placeholder="可留空，使用环境变量">
+          </label>
+          <label>
+            <span>Model</span>
+            <input id="model" value="gpt-4o-mini">
+          </label>
+          <label>
+            <span>Base URL</span>
+            <input id="baseUrl" value="https://api.openai.com/v1">
+          </label>
+          <label>
+            <span>Batch Size</span>
+            <input id="batchSize" type="number" min="1" max="100" value="20">
+          </label>
+        </div>
+
+        <textarea id="inputJson" spellcheck="false"></textarea>
+
+        <div class="bottom-actions">
+          <button type="button" class="primary" id="classifyBtn">开始打标</button>
+          <label class="file-btn">
+            导入 JSON
+            <input id="fileInput" type="file" accept=".json,application/json">
+          </label>
+        </div>
+      </section>
+
+      <section class="panel output-panel">
+        <div class="panel-title">
+          <h2>结果</h2>
+          <div class="actions">
+            <button type="button" id="copyBtn">复制</button>
+            <button type="button" id="downloadBtn">下载</button>
+          </div>
+        </div>
+
+        <div class="summary" id="summary">
+          <span>记录数：0</span>
+          <span>High：0</span>
+          <span>Medium：0</span>
+          <span>Low：0</span>
+        </div>
+
+        <pre id="outputJson">{}</pre>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
